@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
-import 'aos/dist/aos.css';
-import '../dist/css/index.css'
+// import 'aos/dist/aos.css';
+// import '../dist/css/index.css'
 import logo from '/public/img/Logo-EV.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';

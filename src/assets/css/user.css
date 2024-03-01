@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Libre+Caslon+Display&family=Montserrat:wght@600&family=Poppins:wght@100&family=Roboto:ital,wght@1,300&display=swap');
+
+.body-user {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(328deg, #000AFF 1%, #ffffff 96%);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+body.scrolled .navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+body.show-about .about-page {
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0);
+    /* Latar belakang transparan saat tidak di-scroll */
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    /* Efek transisi untuk perubahan warna background dan blur */
+    z-index: 1000;
+}
+
+.navbar.blurred {
+    backdrop-filter: blur(10px);
+    /* Efek blur pada latar belakang navbar */
+    background: rgba(152, 209, 255, 0.205);
+    /* Warna latar belakang transparan untuk efek blur */
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    margin-left: 40px;
+    font-size: 24px;
+    color: #000;
+    font-family: 'crimson text', sans-serif;
+    font-style: italic;
+    font-weight: 1000;
+
+}
+
+.logo-container {
+    width: 40px;
+    /* Sesuaikan dengan lebar logo */
+    height: 40px;
+    /* Sesuaikan dengan tinggi logo */
+    margin-right: 10px;
+    /* Sesuaikan dengan jarak antara logo dan teks brand */
+}
+
+.logo {
+    margin-bottom: 10px;
+    margin-left: 40px;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Untuk membuat logo bundar jika diperlukan */
+
+}
+
+.footer-container {
+    text-align: center;
+    margin-top: 20px;
+    /* Sesuaikan sesuai kebutuhan Anda */
+    font-size: medium;
+}
+
+footer {
+    background-color: #f2f2f21d;
+    /* Atur warna latar belakang sesuai keinginan Anda */
+    padding: 10px;
+    width: 100%;
+}
+
+/* LOGIN */
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.show-hide-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    /* Adjust the margin as needed */
+}
+
+.login-btn {
+    background-color: #001aff;
+    /* Warna tombol, sesuaikan dengan keinginan Anda */
+    color: #ffffff;
+    /* Warna teks tombol, sesuaikan dengan keinginan Anda */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'montserrat';
+    font-style: italic;
+}
+
+.logout-btn {
+    background-color: crimson;
+    /* Warna tombol, sesuaikan dengan keinginan Anda */
+    color: #ffffff;
+    /* Warna teks tombol, sesuaikan dengan keinginan Anda */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 8px 1px red;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: 'Roboto';
+    font-style: italic;
+}
+
+.logout-btn:hover {
+    background-color: #eaeaea;
+    color: crimson;
+    transition: 0.8s ease-in;
+}
+
+.login-btn button:hover {
+    background-color: #001aff;
+}
+
+.logout-btn button:hover {
+    background-color: #001aff;
+}
+
+.action-btn {
+    background-color: #001aff;
+    /* Warna tombol, sesuaikan dengan keinginan Anda */
+    color: #ffffff;
+    /* Warna teks tombol, sesuaikan dengan keinginan Anda */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'montserrat';
+    font-style: italic;
+}
+
+.action-btn svg {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.content {
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    font-family: ' Libre Caslon Display';
+
+}
+
+.text-content {
+    max-width: 50%;
+    font-family: 'Libre Caslon Display', serif;
+}
+
+.text-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+}
+
+.image-content img {
+    max-width: 20px;
+    height: auto;
+    border-radius: 50px;
+    animation: moveUpAnimation 1.3s linear infinite;
+}
+
+@keyframes moveUpAnimation {
+    0% {
+        transform: translateY(10);
+        /* Awalnya tidak bergerak (translasi Y 0) */
+    }
+
+    50% {
+        transform: translateY(-2%);
+        /* Pada tengah animasi, bergerak ke atas (translasi Y -50%) */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Kembali ke posisi awal pada akhir animasi */
+    }
+}
+
+.logout-confirmation {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    align-items: center;
+    transform: translate(-50%, 50%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(78, 78, 78, 0.8603816526610644) 47%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.logout-confirmation p {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.logout-confirmation h1 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.logout-confirmation button {
+    width: 100%;
+    align-items: center;
+    padding: 15px 200px;
+    border: none;
+    background-color: rgba(11, 12, 11, 0.5);
+    color: white;
+    display: grid;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.logout-confirmation button:hover {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(60, 231, 22, 0.438) 47%, rgba(255, 255, 255, 0.055) 100%);
+    border: rgb(34, 199, 34);
+}
+
+.logout-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+.background {
+
+    width: 100 vh;
+    height: 100vh;
+}
+
+.auth {
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 2rem;
+    border-radius: .5rem;
+    min-width: 32rem;
+}
+
+.auth h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid rgb(0, 0, 0);
+    color: black;
+}
+
+.auth form {
+    margin: 1rem;
+}
+
+.auth input {
+    width: 100%;
+    margin-top: 2rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    border: none;
+    border-bottom: 0.15rem solid rgb(163, 163, 163);
+    padding: 0 0.5rem;
+    outline: none;
+}
+
+.auth input:hover {
+    border-bottom: 0.15rem solid #0086da;
+}
+
+.auth input::placeholder {
+    color: rgb(163, 163, 163);
+}
+
+
+.auth form p {
+    font-size: 1.3rem;
+    padding: 3rem .5rem 0 0;
+    color: rgb(163, 163, 163);
+}
+
+.auth form p:hover {
+    color: rgb(80, 80, 80);
+    cursor: pointer;
+}
+
+.auth button[type="submit"] {
+    display: block;
+    margin: 2rem auto;
+    font-size: 1.6rem;
+    width: 90%;
+    padding: 0.9rem 0;
+    border-radius: 1.7rem;
+    border: none;
+    background-color: #0086da;
+    color: #ffffff;
+}
+
+.auth button[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.auth .login-message {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.auth .login-message span {
+    color: #007ecc;
+    font-weight: 600;
+}
+
+.auth .login-message span:hover {
+    cursor: pointer;
+}
+
+/* About Page */
+
+.about {
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Libre Caslon Display';
+}
+
+.about-content {
+    color: #000;
+}
+
+.about-content p {
+    font-size: 19px;
+}
+
+
+
+
+/* Pemilihan page */
+
+.box-voting {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+
+.pemilihan-text {
+    font-size: 30px;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Roboto';
+    max-height: 150px;
+    /* Atur tinggi maksimum yang sesuai */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #39393fcb;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 46px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nama-calon {
+    padding-top: 20px;
+    text-align: center;
+    font-size: medium;
+}
+
+.text-container {
+    padding-bottom: 10PX;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.random-text {
+    color: rgb(241, 233, 233);
+    font-size: 19px;
+    text-align: center;
+}
+
+.voting-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #0400ff;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.voting-button:hover {
+    background-color: #5969FB;
+}
+
+
+/* Import font-family sesuai kebutuhan Anda */
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(328deg, #000AFF 1%, #ffffff 96%);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.body-front {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(328deg, #000AFF 1%, #ffffff 96%);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body.scrolled .navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+body.show-about .about-page {
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    z-index: 1000;
+}
+
+/* Media query untuk tablet dan desktop */
+@media (min-width: 769px) {
+    .content {
+        flex-direction: row;
+        padding: 50px 100px;
+    }
+
+    .text-content {
+        max-width: 50%;
+    }
+
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .box-voting {
+        margin-top: 70px;
+        flex-direction: row;
+    }
+
+    .container {
+        max-width: 300px;
+    }
+}
+
+/* Media query untuk tablet */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image-content {
+        margin-top: 20px;
+    }
+
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .box-voting {
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media query untuk mobile */
+@media (max-width: 480px) {
+    .content {
+        padding: 50px 10px;
+    }
+
+    .text-content {
+        font-size: 1.2rem;
+    }
+
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .box-voting {
+        margin-top: 30px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media query untuk tablet dan desktop */
+
+
+/* Media query untuk tablet */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        order: 2;
+        /* Urutan teks berada di bawah gambar pada tablet */
+    }
+
+    .image-content {
+        margin-top: 20px;
+        order: 1;
+        /* Urutan gambar berada di atas teks pada tablet */
+    }
+
+
+
+    /* ... Gaya CSS lainnya tidak berubah ... */
+}
+
+/* Media query untuk mobile */
+@media (max-width: 480px) {
+    .content {
+        padding: 50px 10px;
+    }
+
+    .text-content {
+        font-size: 18px;
+        order: 2;
+        /* Urutan teks berada di bawah gambar pada mobile */
+    }
+
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .image-content {
+        order: 1;
+        /* Urutan gambar berada di atas teks pada mobile */
+    }
+
+    /* ... Gaya CSS lainnya tidak berubah ... */
+}
