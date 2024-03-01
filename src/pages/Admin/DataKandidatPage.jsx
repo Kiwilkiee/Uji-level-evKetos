@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
-import '../../dist/css/Admin/admin.css'
+// import '../../dist/css/Admin/admin.css'
 import AddKandidatForm from '../../Component/AddKandidatForm';
 import Notification from '../../component/Notification'; // Import Notification component
 

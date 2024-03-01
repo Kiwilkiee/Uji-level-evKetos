@@ -4,13 +4,15 @@ import Logo from '/public/img/logo-EV.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUsers, faList } from '@fortawesome/free-solid-svg-icons';
 import { IoPersonAddSharp } from "react-icons/io5";
-import '../dist/css/Admin/admin.css';
+// import '../dist/css/Admin/admin.css';
+import "../assets/css/admin.css";
+
 
 const SidebarComponent = () => {
   const location = useLocation(); // Mendapatkan lokasi saat ini
 
   return (
-    <div className='sidebar-admin'>
+    <div className='sidebar'>
       <h2>Ev-Ketos</h2>
       <img src={Logo} alt="logo" style={{ width: '100%' }} />
       <ul>

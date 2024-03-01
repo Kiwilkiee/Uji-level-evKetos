@@ -1,16 +1,16 @@
 import React from 'react'
-import '../../dist/css/Admin/admin.css'
-import SidebarComponent from '../../Component/SidebarComponent'
+// import 'assets/css/admin.css'
+// import SidebarComponent from '../../Component/SidebarComponent'
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs'
 
 
 const DashboardPage = () => {
   return (
-    <>
-    <SidebarComponent />
-    <div className='main-title-admin'>
-      <h3>DASHBOARD</h3>
-    </div><div className='main-cards-admin'>
+    <div>
+      <div className='main-title-admin'>
+        <h3>DASHBOARD</h3>
+      </div>
+      <div className='main-cards-admin'>
         <div className='card-admin'>
           <div className='card-inner-admin'>
             <h3>Jumlah Pemilih</h3>
@@ -40,7 +40,7 @@ const DashboardPage = () => {
           <h1>3</h1>
         </div>
       </div>
-      </>
+    </div>
   )
 }
 

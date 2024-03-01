@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '/img/Logo-EV.png';
-import '../dist/css/index.css';
+// import '../dist/css/index.css';
 import { useNavigate } from 'react-router-dom';
 
 const NavbarComponent = () => {

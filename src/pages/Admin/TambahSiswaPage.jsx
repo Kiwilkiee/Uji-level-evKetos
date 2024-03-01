@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../dist/css/Admin/admin.css'
+// import '../../dist/css/Admin/admin.css'
 
 const TambahSiswaPage = () => {
   const [formData, setFormData] = useState({

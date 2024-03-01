@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../dist/css/Admin/admin.css'; // Import CSS file for notification styles
+// import '../dist/css/Admin/admin.css'; // Import CSS file for notification styles
 
 const Notification = ({ visible, type, message, onHide }) => {
   useEffect(() => {
